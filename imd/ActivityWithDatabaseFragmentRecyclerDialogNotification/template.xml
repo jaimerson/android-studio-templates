@@ -1,0 +1,88 @@
+<template format="4"
+        revision="1"
+        name="Activity with recyclerview database fragment dialog notification"
+        description="Creates a new Tab activity within fragment classes with recyclerview">
+
+    <category value="Activity"/>
+
+    <parameter
+        id="modelName"
+        name="Model Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Model"
+        help="Name of the entity" />
+
+    <parameter
+        id="databaseName"
+        name="Database Name"
+        type="string"
+        constraints="unique|nonempty"
+        default="application"
+        help="Name of the database for the application" />
+
+    <parameter
+        id="tableName"
+        name="Table Name"
+        type="string"
+        constraints="unique|nonempty"
+        default="models"
+        help="Name of the database table for the entity" />
+
+    <parameter
+        id="mainActivityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="broadcastReceiverClass"
+        name="Broadcast Receiver Class Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="CustomBroadcastReceiver"
+        help="The name of the broadcast receiver class to create" />
+
+    <parameter
+        id="mainActivityLayout"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="dialogFragmentClass"
+        name="Dialog Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MyDialogFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="itemAdapterClass"
+        name="Item Adapter Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MainAdapter"
+        help="The name of the adapter class" />
+
+    <parameter
+        id="itemLayout"
+        name="item Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="main_item"
+        help="The name of the item layout" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <execute file="recipe.xml.ftl" />
+</template>
